@@ -72,6 +72,7 @@ CREATE TABLE student_section (
     student_id int,
     section_id int,
     grade float,
+    daystime varchar(50),
     FOREIGN KEY (student_id) REFERENCES student (id),
     FOREIGN KEY (section_id) REFERENCES section (id),
 )
