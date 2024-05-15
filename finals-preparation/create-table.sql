@@ -69,8 +69,10 @@ CREATE TABLE section (
     CRoom varchar(255),
     DaysTime varchar(255),
     Instructor int,
+    Course varchar(255),
     PRIMARY KEY (SecId),
-    FOREIGN KEY (Instructor) REFERENCES instructor (Id)
+    FOREIGN KEY (Instructor) REFERENCES instructor (Id),
+    FOREIGN KEY (Course) REFERENCES course (CCode)
 );
 
 CREATE TABLE student_section (
