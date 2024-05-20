@@ -128,6 +128,6 @@ VALUES
 INSERT INTO
     student_section (Id, SId, SecId)
 VALUES
-    (1, 1, 1),
-    (2, 2, 2),
-    (3, 3, 3);
+    (1, 1, 1, 3.5),
+    (2, 2, 2, 4.0),
+    (3, 3, 3, 5.0);

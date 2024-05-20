@@ -25,8 +25,17 @@ CREATE TABLE course (
     Credits int,
     CDesc text,
     DCode varchar(255),
-    PRIMARY KEY (CoName),
+    PRIMARY KEY (CCode),
     FOREIGN KEY (DCode) REFERENCES department (DCode)
+);
+
+CREATE TABLE course_prerequisite (
+    Id int,
+    CCode varchar(255),
+    Prerequisite varchar(255),
+    PRIMARY KEY (Id),
+    FOREIGN KEY (CCode) REFERENCES course (CCode),
+    FOREIGN KEY (Prerequisite) REFERENCES course (CCode)
 );
 
 CREATE TABLE instructor (
@@ -79,6 +88,7 @@ CREATE TABLE student_section (
     Id int,
     SId int,
     SecId int,
+    Grade double,
     PRIMARY KEY (Id),
     FOREIGN KEY (SId) REFERENCES student (SId),
     FOREIGN KEY (SecId) REFERENCES section (SecId)
